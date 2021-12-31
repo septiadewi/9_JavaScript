@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Pilih gambar</h3>
+        <table style="border: solid 1px">
+          <tr>
+            <td>
+              <label for="quotes">Pilihlah Salah Satu Transportasi Ini</label><br />
+              <select id="quotes">
+                <option value="a">Quotes 1</option>
+                <option value="b">Quotes 2</option>
+                <option value="c">Quotes 3</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button onclick="cetakGambar()">Cetak</button>
+      <br />
+      <div style="width: 150px; height: 150px; border-style: solid 1px">
+        <img src="" id="gambar" />
+      </div>
+      <script>
+        function cetakGambar() {
+          let quotes = document.getElementById("quotes");
+          let gambar = document.getElementById("gambar");
+  
+          if (quotes.value === "a") {
+            gambar.src = "itss.jpeg";
+            window.alert("Ini quotes 1");
+          }
+  
+          if (quotes.value === "b") {
+            gambar.src = "keep.jpeg";
+            window.alert("Ini quotes 2");
+          }
+  
+          if (quotes.value === "c") {
+            gambar.src = "nirmana.jpeg";
+            window.alert("Ini quotes 3");
+          }
+        }
+      </script>
+</body>
+</html>

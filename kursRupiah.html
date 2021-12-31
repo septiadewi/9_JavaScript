@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="masukan" onchange="ubah()">
+
+    <select id="pilihan" onchange="ubah()">
+        <option value="">Tolong dipilih ya guys</option>
+        <option value="Dollar US">Dollar US</option>
+        <option value="Dollar Singapure">Dollar Singapure</option>
+        <option value="Ringgit Malaysia">Ringgit Malaysia</option>
+    </select>
+
+
+    <input type="text" id="keluaran">
+
+     <script>
+         let masukan = document.getElementById("masukan")
+         let pilihan =  document.getElementById("pilihan")
+         let keluaran =  document.getElementById("keluaran")
+         let penampung
+
+         function ubah() {
+             if (pilihan.value == "Dollar US") {
+                 penampung = parseInt(masukan.value) * 9915
+             }
+
+             keluaran.value = "Rp. " + penampung
+         }
+
+        // let nama = "Alif" //string
+        // let umur = 21 // number
+        // let pecahan = 12.5 // decimal
+        // let boolean = true // boolean
+        // let namaBuah = ["Apel", "Pepaya", "Mangga"] //array
+        // let biodata = {nama : "Alif", umur : 15, alamat : "Depok"} //object
+
+        // console.log(biodata.nama)
+
+        // function luasLingkaran() {
+        //     const phi = 3.14
+        //     let r = 7
+        //     let rumus = phi * r * r
+        // }
+
+        // luasLingkaran()
+        // luasLingkaran()
+        // luasLingkaran()
+        // luasLingkaran()
+        // luasLingkaran()
+    </script>
+    
+</body>
+</html>
